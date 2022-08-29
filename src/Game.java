@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Game {
     private int rolls = 0;
-    private int player = 0;
+    private String player = "";
     private final Scanner input = new Scanner(System.in);
     private int dice1 = 0;
     private int dice2 = 0;
@@ -9,9 +9,9 @@ public class Game {
     public Game(){
     }
 
-    public int roll(int playerNum)
+    public int roll(String name)
     {
-        player = playerNum;
+        player = name;
         rolls = 0;
         dice1 = 0;
         dice2 = 0;

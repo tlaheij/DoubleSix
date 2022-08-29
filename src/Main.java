@@ -1,18 +1,26 @@
+import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args)
     {
         Game result = new Game();
-        int player1 = result.roll(1);
-        int player2 = result.roll(2);
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter player 1's name:");
+        String name1 = input.nextLine();
+        System.out.println("Enter player 2's name: ");
+        String name2 = input.nextLine();
+
+        int player1 = result.roll(name1);
+        int player2 = result.roll(name2);
 
         if (player1 < player2)
         {
-            System.out.println("player 1 wins with a score of " + player1);
+            System.out.println(name1 + " wins with a score of " + player1);
         }
         else if (player1 > player2)
         {
-            System.out.println("player 2 wins with a score of "+ player2);
+            System.out.println(name2 + " wins with a score of "+ player2);
         }
         else
         {
