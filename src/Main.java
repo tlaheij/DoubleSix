@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main
 {
@@ -10,9 +11,11 @@ public class Main
         String name1 = input.nextLine();
         System.out.println("Enter player 2's name: ");
         String name2 = input.nextLine();
+        System.out.println("Enter number of dice: ");
+        int numDice = input.nextInt();
 
-        int player1 = result.roll(name1);
-        int player2 = result.roll(name2);
+        int player1 = result.roll(name1, numDice);
+        int player2 = result.roll(name2, numDice);
 
         if (player1 < player2)
         {
